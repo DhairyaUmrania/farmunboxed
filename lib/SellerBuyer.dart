@@ -1,5 +1,6 @@
 import 'package:farmunboxed/RegisterBuyer.dart';
 import 'package:farmunboxed/RegisterSeller.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -81,31 +82,38 @@ class SellerBuyer extends StatelessWidget {
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.fromLTRB(20.0,0,20,20),
                 child: Container(
 
+                  height: screen.height/4,
 
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                          offset: Offset(
-                            0, // Move to right 10  horizontally
-                            15.0, // Move to bottom 10 Vertically
-                          ),
-                          color: HexColor("#D6BD89"),
-                          blurRadius: 10,
-                          spreadRadius: 5
-                      )
-                    ],
-                    gradient: LinearGradient(colors: [HexColor('#FFB229'), HexColor('#F95D26')]),
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  child:Stack(
                     children: [
-                      Image(image: AssetImage("assets/images/Union 1.png"),
-                        fit: BoxFit.fitHeight,
-                      ),
+                      Container(
+                        margin: EdgeInsets.only(top:35) ,
+                        height: screen.height/5,
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                                offset: Offset(
+                                  0, // Move to right 10  horizontally
+                                  15.0, // Move to bottom 10 Vertically
+                                ),
+                                color: HexColor("#D6BD89"),
+                                blurRadius: 10,
+                                spreadRadius: 5
+                            )
+                          ],
+                          gradient: LinearGradient(colors: [HexColor('#FFB229'), HexColor('#F95D26')]),
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+
+                      SizedBox(width: screen.width/40,),
+
                       Text(
                         'Register as \nSeller\n',
                         style: TextStyle(
@@ -120,116 +128,151 @@ class SellerBuyer extends StatelessWidget {
                       ),
                     ],
                   ),
+
+
+                      ),
+                      Container(
+                        height: screen.height/4,
+                        margin: EdgeInsets.only(left: screen.width/12),
+                        child: Image(image: AssetImage("assets/images/Union 1.png"),
+                          fit: BoxFit.fitHeight,
+                        ),
+                      ),
+
+
+                    ]
+                  ),
+
                 ),
 
-                // child: Stack(
-                //
-                //   children: [
-                //     Positioned(
-                //
-                //       child: Container(
-                //
-                //
-                //         decoration: BoxDecoration(
-                //           boxShadow: [
-                //             BoxShadow(
-                //                 offset: Offset(
-                //                   0, // Move to right 10  horizontally
-                //                   15.0, // Move to bottom 10 Vertically
-                //                 ),
-                //                 color: HexColor("#D6BD89"),
-                //                 blurRadius: 10,
-                //                 spreadRadius: 5
-                //             )
-                //           ],
-                //           gradient: LinearGradient(colors: [HexColor('#FFB229'), HexColor('#F95D26')]),
-                //           borderRadius: BorderRadius.all(Radius.circular(20)),
-                //         ),
-                //         child: Row(
-                //           mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //           children: [
-                //             SizedBox(width: screen.width/4,
-                //               height: screen.height/5,),
-                //             Text(
-                //               'Register as \nSeller\n',
-                //               style: TextStyle(
-                //                 fontFamily: 'Simply Rounded',
-                //                 fontSize: screen.height/37,
-                //                 color: const Color(0xffffffff),
-                //                 height: 1,
-                //               ),
-                //               textHeightBehavior:
-                //               TextHeightBehavior(applyHeightToFirstAscent: false),
-                //               textAlign: TextAlign.left,
-                //             ),
-                //           ],
-                //         ),
-                //       ),
-                //     ),
-                //     Positioned(
-                //
-                //       child: Container(
-                //           height: screen.height/4,
-                //           child: Image(image: AssetImage("assets/images/Union -1.png"),
-                //               fit: BoxFit.fitHeight,
-                //           )
-                //       ),
-                //     ),
-                //
-                //   ]
-                // ),
+
               ),
             ),
             GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => RegisterBuyer()),
-                  );
-                },
-
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RegisterBuyer()),
+                );
+              },
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.fromLTRB(20.0,0,20,20),
                 child: Container(
 
-                  decoration: BoxDecoration(
-                    boxShadow: [
+                  height: screen.height/4,
 
-                      BoxShadow(
-                          offset: Offset(
-                            0, // Move to right 10  horizontally
-                            15.0, // Move to bottom 10 Vertically
+                  child:Stack(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top:35) ,
+                          height: screen.height/5,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                  offset: Offset(
+                                    0, // Move to right 10  horizontally
+                                    15.0, // Move to bottom 10 Vertically
+                                  ),
+                                  color: HexColor("#D6BD89"),
+                                  blurRadius: 10,
+                                  spreadRadius: 5
+                              )
+                            ],
+                            gradient: LinearGradient(colors: [HexColor('#1FC27F'), HexColor('#0B6B3B')]),
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
                           ),
-                          color: HexColor("#226E0B"),
-                          blurRadius: 30,
 
-                      )
-                    ],
-                    gradient: LinearGradient(colors: [HexColor('#1FC27F'), HexColor('#0B6B3B')]),
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
 
-                      Text(
-                        'Register as \nBuyer\n',
-                        style: TextStyle(
-                          fontFamily: 'Simply Rounded',
-                          fontSize: screen.height/37,
-                          color: const Color(0xffffffff),
-                          height: 1,
+
+
+                              Text(
+                                'Register as \nBuyer\n',
+                                style: TextStyle(
+                                  fontFamily: 'Simply Rounded',
+                                  fontSize: screen.height/37,
+                                  color: const Color(0xffffffff),
+                                  height: 1,
+                                ),
+                                textHeightBehavior:
+                                TextHeightBehavior(applyHeightToFirstAscent: false),
+                                textAlign: TextAlign.left,
+                              ),
+                              SizedBox(width: screen.width/40,),
+                            ],
+                          ),
+
+
                         ),
-                        textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
-                        textAlign: TextAlign.left,
-                      ),
-                      Image(image: AssetImage("assets/images/Intersection 1.png")),
-                    ],
+                        Container(
+                          height: screen.height/4,
+                          margin: EdgeInsets.only(left: screen.width/2),
+                          child: Image(image: AssetImage("assets/images/Intersection 1.png"),
+                            fit: BoxFit.fitHeight,
+                          ),
+                        ),
+
+
+                      ]
                   ),
+
                 ),
+
+
               ),
             ),
+            // GestureDetector(
+            //     onTap: () {
+            //       Navigator.push(
+            //         context,
+            //         MaterialPageRoute(builder: (context) => RegisterBuyer()),
+            //       );
+            //     },
+            //
+            //   child: Padding(
+            //     padding: const EdgeInsets.all(20.0),
+            //     child: Container(
+            //
+            //       decoration: BoxDecoration(
+            //         boxShadow: [
+            //
+            //           BoxShadow(
+            //               offset: Offset(
+            //                 0, // Move to right 10  horizontally
+            //                 15.0, // Move to bottom 10 Vertically
+            //               ),
+            //               color: HexColor("#226E0B"),
+            //               blurRadius: 30,
+            //
+            //           )
+            //         ],
+            //         gradient: LinearGradient(colors: [HexColor('#1FC27F'), HexColor('#0B6B3B')]),
+            //         borderRadius: BorderRadius.all(Radius.circular(20)),
+            //       ),
+            //       child: Row(
+            //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //         children: [
+            //
+            //           Text(
+            //             'Register as \nBuyer\n',
+            //             style: TextStyle(
+            //               fontFamily: 'Simply Rounded',
+            //               fontSize: screen.height/37,
+            //               color: const Color(0xffffffff),
+            //               height: 1,
+            //             ),
+            //             textHeightBehavior:
+            //             TextHeightBehavior(applyHeightToFirstAscent: false),
+            //             textAlign: TextAlign.left,
+            //           ),
+            //           Image(image: AssetImage("assets/images/Intersection 1.png")),
+            //         ],
+            //       ),
+            //     ),
+            //   ),
+            // ),
             Text("Skip For now"),
           ],
 
